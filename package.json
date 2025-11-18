@@ -1,0 +1,58 @@
+{
+  "name": "historic-game-titles-notifier",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@contentful/app-sdk": "^4.29.5",
+    "@contentful/f36-components": "^4.77.5",
+    "@contentful/react-apps-toolkit": "^1.2.16",
+    "contentful-management": "^11.47.2",
+    "emotion": "10.0.27",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "cross-env BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "eject": "react-scripts eject",
+    "create-app-definition": "contentful-app-scripts create-app-definition",
+    "upload": "contentful-app-scripts upload --bundle-dir ./build",
+    "upload-ci": "contentful-app-scripts upload --ci --bundle-dir ./build --organization-id $CONTENTFUL_ORG_ID --definition-id $CONTENTFUL_APP_DEF_ID --token $CONTENTFUL_ACCESS_TOKEN",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@contentful/app-scripts": "1.32.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "12.1.5",
+    "@tsconfig/create-react-app": "1.0.3",
+    "@types/jest": "29.4.0",
+    "@types/node": "^22.2.0",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "cross-env": "7.0.3",
+    "gh-pages": "^5.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "typescript": "^5.7.3"
+  },
+  "homepage": "."
+}
